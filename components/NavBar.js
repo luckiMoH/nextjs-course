@@ -1,17 +1,27 @@
-import Link from "next/link";
+import Link from 'next/link';
+import ThemeSwitch from './ThemeSwitch';
 
 function NavBar() {
   return (
     <nav>
       <ul>
         <li>
-          <Link href="/">home</Link>
+          <Link href="/">
+            Home
+          </Link>
         </li>
         <li>
-          <Link href="/about">about</Link>
+          <Link href="/about">
+            About
+          </Link>
         </li>
       </ul>
+      <ThemeSwitch />
       <style jsx>{`
+        nav {
+          display: flex;
+          justify-content: space-between;
+        }
         ul {
           list-style-type: none;
           padding: 0;
@@ -24,7 +34,7 @@ function NavBar() {
         }
       `}</style>
     </nav>
-  );
+  )
 }
 
 export default NavBar;
